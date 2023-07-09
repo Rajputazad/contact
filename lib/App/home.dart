@@ -17,26 +17,29 @@ class _Home extends State<Home> {
   final TextEditingController _desc = TextEditingController();
 
     Future<void>post() async {
+      var client = http.Client();
     var uri = Uri.parse("https://encouraging-hare-attire.cyclic.app/receivecontact");
     var data = {
-      "Name ": _name.text,
-      "Email ": _name.text,
-      "Phone ": _name.text,
-      "Disc": _name.text,
+      "Name": _name.text,
+      "Email": _email.text,
+      "Phone": _phone.text,
+      "Disc": _desc.text,
     };
-    var headers = {'Content-Type': 'application/json'};
+    // var headers = {'Content-Type': 'application/json'};
     var body = jsonEncode(data);
     // print(body);
 
     try {
-      var res = await http.post(uri, headers: {'Content-Type': 'application/json'}, body: body);
+      var res = await http.post(uri, headers: {'Content-Type': 'application/json',}, body: body,);
+        // print(res.toString());
       if (res.statusCode == 200) {
-        print(res);
+        print('Request successful');
+        print(res.body.toString());
       } else {
-        print(res);
+        print(res.body.toString());
       }
     } catch (e) {
-      print(e);
+      print(e.toString());
     }
   }
 
