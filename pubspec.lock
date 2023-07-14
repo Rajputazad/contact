@@ -62,6 +62,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_animated_dialog:
+    dependency: "direct main"
+    description:
+      name: flutter_animated_dialog
+      sha256: "16b88e56ea7014925a1ed4c3c3644f735edfe9194d5cc027a1a10a95d8f55fce"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.1"
   flutter_dotenv:
     dependency: "direct main"
     description:
@@ -221,6 +229,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1"
+  toast:
+    dependency: "direct main"
+    description:
+      name: toast
+      sha256: "12433091e3e5a25b3a25f670126e42547c9ade135de30ad9ace45d1ddccd57c9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.0"
   typed_data:
     dependency: transitive
     description:
@@ -239,4 +255,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=3.0.5 <4.0.0"
-  flutter: ">=1.10.0"
+  flutter: ">=1.20.0"
